@@ -37,5 +37,21 @@ print("---리스트 내장 형식---")
 lst = [1,2,3,4,5,6,7,8,9,10]
 print( [i**2 for i in lst if i > 5] )
 
+tp = ("apple", "kiwi")
+print( [len(i) for i in tp] )
+
+d = {100:"apple", 200:"banana", 300:"kiwi"}
+print( [v.upper() for v in d.values()] )
+
+#반복문에서 필터링하는 함수
+def getBiggerThan20(i):
+    return i > 20 
+
+lst = [10, 25, 30]
+#함수를 호출
+iterL = filter(getBiggerThan20, lst)
+for i in iterL:
+    print(i)
+
 
 
