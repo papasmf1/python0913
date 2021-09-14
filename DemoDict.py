@@ -44,3 +44,43 @@ print( p )
  
 print("kang" in phone )
 print("kang" not in phone )
+
+print("---논리식---")
+print( 1 < 2 )
+print( 1 != 2 )
+print( 1 == 2 )
+print( bool(0) )
+print( bool(1) )
+print( bool("") )
+print( bool("demo") )
+print( bool([]) )
+print( bool([1,2,3]) )
+print( True and True and False )
+print( True and True and True )
+print( True or False or False )
+
+print("---얕은복사---")
+a = [1,2,3]
+b = a 
+a[0] = 38 
+print(a)
+print(b)
+print( id(a), id(b) )
+
+print("---깊은복사---")
+a = [1,2,3]
+b = a[:] 
+a[0] = 38 
+print(a)
+print(b)
+print( id(a), id(b) )
+
+#리스트형식이 아닌 경우
+import copy 
+a = [100, 200, 300]
+b = copy.deepcopy(a)
+a[0] = 101
+print(a)
+print(b)
+print( id(a), id(b) )
+
