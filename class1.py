@@ -10,5 +10,11 @@ class Person:
 
 #인스턴스(복사본 생성)
 p1 = Person()
-p1.print()
+p2 = Person()
 
+p1.print()
+p2.name = "전우치"
+p1.print()
+p2.print() 
+
+print( globals() )
