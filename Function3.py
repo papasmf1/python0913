@@ -20,5 +20,13 @@ print( globals() )
 print("---dir()---")
 print( dir() )
 
+#함수 내부에서 함수를 바로 호출
+lst = [10, 25, 30]
+#함수의 인자로 함수를 바로 정의(람다 함수 사용)
+itemL = filter(lambda x:x>20, lst)
+for i in itemL:
+    print(i)
+
+
 
 
