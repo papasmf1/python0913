@@ -12,7 +12,16 @@ soup = BeautifulSoup(page, "html.parser")
 #<p>태그 몽땅 가져와~~ ==> 리스트에 담아서 
 #print( soup.find_all("p") )
 #<a>태그 몽땅
-print( soup.find_all("a") )
+#print( soup.find_all("a") )
+#첫번째 <p>태그만 가져오기
+#print( soup.find("p") )
+#특정 속성을 검색: <p class='outer-text'>컨텐츠</p>
+#print( soup.find_all("p", class_="outer-text") )
+
+#문자열만 가져오기<p>교육센터</p>
+for tag in soup.find_all("p"):
+    #태그 안쪽에 문자열: .text 속성 
+    print( tag.text.strip() )
 
 
 
