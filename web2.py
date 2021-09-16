@@ -20,7 +20,7 @@ print(link)
 # 	<a href="/webtoon/detail?titleId=20853">마음의 소리 50화 &lt;격렬한 나의 하루&gt;</a>
 # </td>
 #파일에 저장
-f = open("c:\\work\\webtoon.txt", "wt", encoding="utf-8")
+f = open("c:\\work\\webtoon.txt", "a+", encoding="utf-8")
 for tag in cartoons:
     title = tag.find("a").text 
     print(title.strip()) 
